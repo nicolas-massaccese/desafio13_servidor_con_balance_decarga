@@ -1,0 +1,76 @@
+<div class="container mt-3">
+    
+    <div class="jumbotron" id="wellcome">
+        <h1 id="wellcomeUserName"></h1>
+        <button class="btn btn-success mt-3" id="btn-logout" type="post" action="/logout">Salir</button>
+        <button class="btn btn-success mt-3" id="btn-quienSoy" type="submit" action="/quiensoy">Test Session</button>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Ingrese Nuevo Producto</h1>
+        <br>
+        <form>
+        <!-- <form onsubmit="return sendProduct(this)"> -->
+            <!-- Campo nombre del producto -->
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" class="form-control" type="text" name="name" required>
+            </div>
+
+            <!-- Campo precio del producto -->
+            <div class="form-group">
+                <label for="precio">Precio</label>
+                <input id="precio" class="form-control" type="number" step="0.01" name="price" required>
+            </div>
+
+            <!-- Campo url de la foto del producto -->
+            <div class="form-group">
+                <label for="foto">Foto URL</label>
+                <input id="foto" class="form-control" type="url" name="image" required>
+            </div>
+
+            <!-- Botón de envío -->
+            <button class="btn btn-success mt-3" id="btn-newProduct" type="submit">Agregar</button>
+        </form>
+        
+        <hr>
+
+        <h1>Lista de Productos</h1>
+
+        <div id="productList">
+            <div class="loading">
+                <div class="loading-icon"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="jumbotron">
+        <h1>Mensajeria de Chat</h1>
+        <br>
+        <form>
+        <!-- <form onsubmit="return sendMessage(this)"> -->
+            <!-- Campo nombre del producto -->
+            <div class="form-group">
+                <label for="nombre">Nombre Usuario</label>
+                <input id="usuario" class="form-control" type="text" name="chatUsr" required>
+            </div>
+
+            <!-- Campo precio del producto -->
+            <div class="form-group">
+                <label for="precio">Mensaje</label>
+                <input id="mensaje" class="form-control" type="text" name="chatMsg" required>
+            </div>
+
+            <!-- Botón de envío -->
+            <button class="btn btn-success mt-3" id="btn-newMessage" type="submit">Enviar</button>
+        </form>
+        <hr>
+        <div id="chatContent">
+            <div class="loading">
+                <div class="loading-icon"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

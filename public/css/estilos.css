@@ -1,0 +1,75 @@
+h1 {
+    color: blue;
+}
+
+label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    background-color: darkgrey;
+}
+
+.nameTb { min-width: 220px; font-weight: bold; font-style: italic; }
+.priceTd { min-width: 100px;  font-weight: bold; color:crimson; }
+
+
+.chatContent { display: flex; flex-direction: column; }
+.chatLine { display: flex; flex-direction: row; }
+.user { font-weight: bold; color: blue; }
+.time { color: brown; }
+.msg { font-style: italic; color: green; }
+
+
+.table-line img {
+    width: 70px;
+    height: 70px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+.jumbotron {
+    padding-top: 10px;
+}
+
+
+
+/* LOADING ---------------- */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f8f8; */
+    z-index: 9999;
+  }
+  
+  .loading-icon {
+    border-radius: 50%;
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+    height: 40px;
+    width: 40px;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
