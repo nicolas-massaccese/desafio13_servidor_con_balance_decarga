@@ -17,6 +17,6 @@ const config = yargs.alias(
     modo: 'CLUSTER'
 }).argv; 
 
-console.log(JSON.stringify(configPort, null, 2));
+console.log(JSON.stringify(config, null, 2));
 
 module.exports = { mongoUser, mongoPass, mongoDb, mongoUri, config };
