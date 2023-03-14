@@ -15,18 +15,18 @@ const { mainPage } = require('./pages/loadPages.js');
 
 const path = require ('path');
 
-const { config } = require('./enviroment.js');
+const { config, a, b, c, d } = require('./enviroment.js');
 const { ID, NODEV, FILE, PTH, MEM } = require('./config.js');
 
 
 
 
 const cluster = require('cluster');
-const numCpus = require('os').cpus().length;
+const numCpus = 4;// require('os').cpus().length;
 
-if (config.m === 'CLUSTER' && cluster.isPrimary) {
+if (config.m == 'CLUSTER' && cluster.isPrimary) {
     console.log({numCpus});
-    console.log('cluster');
+    // console.log('cluster');
     console.log(`Master ${process.pid} running`);
 
 // Creamos tantos procesos hijo por CPU que tengamos
@@ -110,7 +110,7 @@ if (config.m === 'CLUSTER' && cluster.isPrimary) {
             });
 
             app.get('/prueba', (_, res) => {
-                res.send(`Servidor en puerto ${config.p}, proceso ${ID}, ${new Date().toISOString()}`);
+                res.send(`Servidor en puerto ${config.p}, proceso ${process.pid}, ${new Date().toISOString()}`);
             });
             
 
@@ -119,9 +119,11 @@ if (config.m === 'CLUSTER' && cluster.isPrimary) {
             });
             server.on("error", error => console.log(`Error en servidor ${error}`));
             
-
-    
 }
+
+
+
+
 
 
 

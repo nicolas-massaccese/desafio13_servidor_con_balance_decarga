@@ -1,0 +1,6 @@
+node desafio13.js -p 8080 -m FORK  
+node desafio13.js -p 8081 -m CLUSTER  
+node desafio13.js -p 8082 -m CLUSTER  
+node desafio13.js -p 8083 -m CLUSTER  
+node desafio13.js -p 8084 -m CLUSTER  
+node desafio13.js -p 8085 -m CLUSTER  
