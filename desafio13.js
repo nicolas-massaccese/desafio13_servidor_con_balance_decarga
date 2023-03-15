@@ -22,7 +22,7 @@ const { ID, NODEV, FILE, PTH, MEM } = require('./config.js');
 
 
 const cluster = require('cluster');
-const numCpus = 4;// require('os').cpus().length;
+const numCpus = require('os').cpus().length;
 
 if (config.m == 'CLUSTER' && cluster.isPrimary) {
     console.log({numCpus});
